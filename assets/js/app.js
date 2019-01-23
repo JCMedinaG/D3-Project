@@ -27,8 +27,7 @@ var svg = d3.select("#scatter")
 var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-// Import Data
-//var file = "https://raw.githubusercontent.com/the-Coding-Boot-Camp-at-UT/UTAUS201807DATA2/master/homework-instructions/16-D3/Instructions/data/data.csv?token=AlrQ1AsqqfeBIqdGwDr3Q8EXWIADFBmmks5b40y2wA%3D%3D"
+
 var file = "assets/data/data.csv"
 
 // Function is called and passes csv data
@@ -69,8 +68,6 @@ function successHandle(statesData) {
 
 
 
-  // Append the axes to the chart group 
-  // Bottom axis moves using height 
   chartGroup.append("g")
     .attr("transform", `translate(0, ${height})`)
     .call(bottomAxis);
@@ -105,8 +102,7 @@ function successHandle(statesData) {
     .style('fill', 'white')
     .text(d => (d.abbr));
 
-  // Step 6: Initialize tool tip
-  // ==============================
+
   var toolTip = d3.tip()
     .attr("class", "tooltip")
     .offset([80, -60])
@@ -114,12 +110,10 @@ function successHandle(statesData) {
       return (`${d.state}<br>Poverty: ${d.poverty}%<br>Obesity: ${d.obesity}% `);
     });
 
-  // Step 7: Create tooltip in the chart
-  // ==============================
+ 
   chartGroup.call(toolTip);
 
-  // Step 8: Create event listeners to display and hide the tooltip
-  // ==============================
+  
   circlesGroup.on("mouseover", function (data) {
     toolTip.show(data, this);
   })
