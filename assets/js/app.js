@@ -85,7 +85,7 @@ function successHandle(statesData) {
     .attr("cx", d => xLinearScale(d.poverty))
     .attr("cy", d => yLinearScale(d.obesity))
     .attr("r", "13")
-    .attr("fill", "#788dc2")
+    .attr("fill", "#403ea5")
     .attr("opacity", ".75")
 
 
