@@ -1,7 +1,3 @@
-## https://jcmedinag.github.io/D3.js-Project/
-
-
-
 ![Newsroom](https://media.giphy.com/media/v2xIous7mnEYg/giphy.gif)
 
 ## Background
